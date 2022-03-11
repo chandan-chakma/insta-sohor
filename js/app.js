@@ -151,10 +151,12 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById("liked").innerHTML = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
+
   });
 };
 
